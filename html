@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Trek Communicator Chirp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            color: white;
+        }
+        button {
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="chirpButton">Press to Chirp</button>
+
+    <audio id="chirpSound" src="communicator-chirp.mp3"></audio>
+
+    <script>
+        // Get references to the button and the audio element
+        const chirpButton = document.getElementById('chirpButton');
+        const chirpSound = document.getElementById('chirpSound');
+
+        // Add event listener for the button click
+        chirpButton.addEventListener('click', () => {
+            chirpSound.play();
+        });
+    </script>
+
+</body>
+</html>
